@@ -1,0 +1,78 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>تسجيل خروج</title>
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+</head>
+
+
+<body dir="rtl">
+<script language="JavaScript">
+<!--
+    function openLogin() {
+	if (window.name != 'hotspot_logout') return true;
+	open('$(link-login)', '_blank', '');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+ <div class="shadow-forms">
+	<div class="message warning">
+		
+	  <div class="sub-head">
+			<h3>Go WiFi</h3>
+          <img src="images/png.png">
+		</div>
+        
+        
+
+<div class="footer">
+<form action="$(link-login)" name="login" onSubmit="return openLogin()">
+
+<div class="sub-head">
+			<h3>تم تسجيل خروجك...
+</h3>
+	  </div>
+
+<table border="1">  
+<tr><th align="right">إسم المستخدم: </th><td>$(username)</td></tr>
+<tr><th align="right">عنوان الايبي: </th><td>$(ip)</td></tr>
+<tr><th align="right">الماك ادرس: </th><td>$(mac)</td></tr>
+<tr><th align="right">وقت الجلسة: </th><td>$(uptime)</td></tr>
+$(if session-time-left)
+<tr><th align="right">الوقت المنصرم: </th><td>$(session-time-left)</td></tr>
+$(endif)
+</table>
+<br />
+
+<input class="signup" type="submit" value="تسجيل دخول مرة أخرى" />
+</form>
+
+    <br />
+				
+        	  </div>
+
+        <div class="sub-head">
+        </div>
+        
+				<div class="sign-up">
+					<p class="sign-right">إدارة الشبكة : 772453819</p>
+	
+					
+
+		</div>
+
+					<div class="clear"> </div>
+				</div>
+			
+		</div>
+	</div>
+<div class="footer">
+
+</div>
+</body>
+</html>

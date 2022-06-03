@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>تسجيل الدخول</title>
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+
+<body>
+	$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<!-- <input type="hidden" name="password" /> -->
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	< !--
+			function doLogin() {
+				document.sendin.username.value = document.login.username.value;
+				// document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+				document.sendin.submit();
+				return false;
+			}
+	//-->
+	</script>
+	$(endif)
+	<div class="shadow-forms">
+		<div class="message warning">
+
+			<div class="sub-head">
+				<!-- <h3>Go WiFi</h3> -->
+				<img src="images/png.png">
+			</div>
+
+			<div class="sign-up">
+				<ul>
+					<li><a href="login.html">تسجيل دخول</a></li>
+					<li><a href="dealers.html">نقاط البيع</a></li>
+					<li><a href="prices.html">الاسعار</a></li>
+					<li><a href="contact-us.html">اتصل بنـا</a></li>
+				</ul>
+			</div>
+
+			$(if trial == 'yes')
+			<!-- <div class="sub-head">
+			<h3>لتجربة الانترنت مجانا, <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">إضغط هنـا</a></h3>
+	  </div> -->
+			$(endif)
+			<form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()"
+				$(endif)>
+				<input type="hidden" name="dst" value="$(link-orig)" />
+				<input type="hidden" name="popup" value="true" />
+				<input value="$(username)" name="username" type="text" placeholder="رقم البطاقة" />
+				<!-- <input name="password" type="password" placeholder="كلمة المرور"/> -->
+				<input class="signup" type="submit" value="تسجيل دخول" />
+
+			</form>
+			<span> </span>
+
+			$(if error)<div class="sub-head">$(error)</div>$(endif)
+
+			<div class="sign-up">
+				<p class="sign-right">إدارة الشبكة : 772453819</p>
+
+
+
+			</div>
+
+			<div class="clear"> </div>
+		</div>
+
+	</div>
+	</div>
+	<div class="footer">
+
+	</div>
+	<script type="text/javascript">
+			< !--
+			document.login.username.focus();
+//-->
+	</script>
+</body>
+
+</html>
